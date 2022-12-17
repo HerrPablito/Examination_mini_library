@@ -7,6 +7,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const booksElem = document.querySelectorAll('.book');
+console.log(booksElem);
+const pageOne = document.querySelector('#pageOne');
+const pageTwo = document.querySelector('#pageTwo');
 const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -27,5 +31,12 @@ function getBooks() {
 ;
 getBooks();
 function showBooks() {
+    booksElem.forEach(book => {
+        book.addEventListener('click', () => {
+            console.log('du klickade på en bok');
+            pageTwo.classList.toggle('hide');
+        });
+    });
 }
+showBooks();
 export {};

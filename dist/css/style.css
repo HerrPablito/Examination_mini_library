@@ -19,12 +19,18 @@ body{
     "container__h1 container__h1 container__h1 container__h1"
     "pageOne pageOne pageOne pageOne"
     ;
-
 }
+
+
+
 #container__h1{
     grid-area: container__h1;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hide{
+    display: none;
 }
 
 #pageOne{
@@ -38,7 +44,7 @@ body{
     ;
 }
 
-.books{
+.book{
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
