@@ -2,8 +2,10 @@
     "compilerOptions": {
         "target": "ES6", 
         "outDir": "./dist/js", 
+        "module": "ES6",
         "watch": true, 
         "strict": false, 
+
     },
     "include": ["./src" ]
 }

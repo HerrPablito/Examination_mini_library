@@ -11,7 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-console.log(Books);
 const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {

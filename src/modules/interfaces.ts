@@ -1,4 +1,4 @@
-interface Books{
+export interface Books{
     title: string,
     authon: string,
     color: string,
@@ -8,5 +8,3 @@ interface Books{
     publisher: string,
     year: number
 }
-
-export {Books};
