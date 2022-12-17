@@ -7,3 +7,73 @@ body{
     width: 100 Wv;
     background-color: rgb(173, 173, 173);
 }
+.container{
+    max-width: 600px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "container__h1 container__h1 container__h1 container__h1"
+    "pageOne pageOne pageOne pageOne"
+    ;
+
+}
+#container__h1{
+    grid-area: container__h1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pageOne{
+    grid-area: pageOne;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "book01 book02 book03 book04"
+    "book05 book06 book07 book08"
+    ;
+}
+
+.books{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#book01{
+    grid-area: book01;
+    background-color: #2F80ED;
+}
+#book02{
+    grid-area: book02;
+    background-color: #27AE60;
+}
+#book03{
+    grid-area: book03;
+    background-color: #6FCF97;
+}
+#book04{
+    grid-area: book04;
+    background-color: #9B51E0;
+}
+#book05{
+    grid-area: book05;
+    background-color: #56CCF2;
+}
+#book06{
+    grid-area: book06;
+    background-color: #F2C94C;
+}
+#book07{
+    grid-area: book07;
+    background-color: #F2994A;
+}
+#book08{
+    grid-area: book08;
+    background-color: #EB5757;
+}
