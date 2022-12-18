@@ -19,13 +19,14 @@ async function getBooks() {
         if (response.status === 200) {
             const booksData: Books[] = await response.json();
             console.log(booksData);
+           
         }
     } catch (error) {
         console.log(error);
     }
 };
 
-getBooks()
+//getBooks()
 function showBooks() {
     booksElem.forEach(book => {
         book.addEventListener('click', () => {
@@ -33,9 +34,14 @@ function showBooks() {
             pageTwo.classList.toggle('hide')            
         });
     })
-
-
 }
 
 
 showBooks()
+
+function showBookInfo(booksData:[]) {
+    console.log(booksData);
+    
+    
+}
+

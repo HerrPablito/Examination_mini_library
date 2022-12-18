@@ -29,7 +29,7 @@ function getBooks() {
     });
 }
 ;
-getBooks();
+//getBooks()
 function showBooks() {
     booksElem.forEach(book => {
         book.addEventListener('click', () => {
@@ -39,4 +39,7 @@ function showBooks() {
     });
 }
 showBooks();
+function showBookInfo(booksData) {
+    console.log(booksData);
+}
 export {};
