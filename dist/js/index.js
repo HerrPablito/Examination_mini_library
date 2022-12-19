@@ -8,19 +8,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const booksElem = document.querySelectorAll('.book');
-console.log(booksElem);
 const pageOne = document.querySelector('#pageOne');
 const pageTwo = document.querySelector('#pageTwo');
+let booksInfo = document.querySelector('#books_info');
 const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const response = yield fetch(API_URL);
-            const bookData = response;
-            console.log(response);
             if (response.status === 200) {
                 const booksData = yield response.json();
                 console.log(booksData);
+                for (let i = 0; i < booksData.length; i++) {
+                    //console.log(booksData[i].year);      
+                    const bookYear = booksData[i].year;
+                    console.log(bookYear);
+                    return bookYear;
+                }
+                //return booksData
             }
         }
         catch (error) {
@@ -29,17 +34,16 @@ function getBooks() {
     });
 }
 ;
-//getBooks()
-function showBooks() {
+getBooks();
+function showBooks(bookYear) {
+    const year = bookYear;
     booksElem.forEach(book => {
         book.addEventListener('click', () => {
             console.log('du klickade på en bok');
             pageTwo.classList.toggle('hide');
+            booksInfo.innerHTML = ('test' + year);
         });
     });
 }
-showBooks();
-function showBookInfo(booksData) {
-    console.log(booksData);
-}
+showBooks(getBooks);
 export {};

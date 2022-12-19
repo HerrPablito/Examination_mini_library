@@ -5,20 +5,31 @@
 // Klicka på bok för att få mer informaion om denna. 
 import { Books } from './modules/interfaces.js';
 const booksElem = document.querySelectorAll('.book')
-console.log(booksElem);
-
 const pageOne = document.querySelector('#pageOne');
 const pageTwo = document.querySelector('#pageTwo');
+let booksInfo = document.querySelector('#books_info')
 const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 
 async function getBooks() {
     try {
         const response = await fetch(API_URL)
-        const bookData = response
-        console.log(response)
+
         if (response.status === 200) {
             const booksData: Books[] = await response.json();
             console.log(booksData);
+
+            for (let i = 0; i < booksData.length; i++) {
+            
+            //console.log(booksData[i].year);      
+            const bookYear = booksData[i].year  
+            console.log(bookYear);
+            return bookYear
+
+
+            }
+
+            
+            //return booksData
            
         }
     } catch (error) {
@@ -26,22 +37,23 @@ async function getBooks() {
     }
 };
 
-//getBooks()
-function showBooks() {
+getBooks()
+
+
+function showBooks(bookYear) {
+    const year = bookYear
     booksElem.forEach(book => {
         book.addEventListener('click', () => {
             console.log('du klickade på en bok');
-            pageTwo.classList.toggle('hide')            
+            pageTwo.classList.toggle('hide') 
+           
+            booksInfo.innerHTML=('test' + year)
+        
         });
     })
 }
 
 
-showBooks()
+showBooks(getBooks)
 
-function showBookInfo(booksData:[]) {
-    console.log(booksData);
-    
-    
-}
 
