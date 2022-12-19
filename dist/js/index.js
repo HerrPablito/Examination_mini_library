@@ -1,3 +1,4 @@
+//MINI LIBRARY
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -7,20 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const booksElem = document.querySelectorAll('.book');
-const pageOne = document.querySelector('#pageOne');
-const pageTwo = document.querySelector('#pageTwo');
-let booksInfo = document.querySelector('#books_info');
-const minimizeInfoElem = document.querySelector('#minimize');
-const container__h1 = document.querySelector('#container__h1');
-const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
+import { booksElem, pageOne, pageTwo, bookHeaderElem, bookAuthorElem, bookPlotElem, bookAudienceElem, bookPublishedElem, bookPagesElem, bookPublisherElem, minimizeInfoElem, container__h1, API_URL } from './modules/vairables.js';
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const response = yield fetch(API_URL);
             if (response.status === 200) {
                 const booksData = yield response.json();
-                console.log(booksData);
                 showBooks(booksData);
             }
         }
@@ -31,38 +25,83 @@ function getBooks() {
 }
 ;
 function showBooks(booksData) {
-    //console.log(booksData);
     booksElem.forEach(book => {
-        console.log(book.id);
         book.addEventListener('click', () => {
             if (book.id === "book01") {
-                booksInfo.innerHTML = (`${booksData[0].title} <br> By ${booksData[0].author} <br> <br> ${booksData[0].plot} <br> Audience: ${booksData[0].audience}    First published: ${booksData[0].year} <br>  Pages: ${booksData[0].pages}  publisher: ${booksData[0].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[0].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[0].author}`);
+                bookPlotElem.innerHTML = (`${booksData[0].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[0].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[0].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[0].pages} `);
+                bookPublisherElem.innerHTML = (`publisher: ${booksData[0].publisher}`);
             }
             else if (book.id === "book02") {
-                booksInfo.innerHTML = (`${booksData[1].title} <br> By ${booksData[1].author} <br> <br> ${booksData[1].plot} <br> Audience: ${booksData[1].audience}    First published: ${booksData[1].year} <br>  Pages: ${booksData[1].pages}  publisher: ${booksData[1].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[1].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[1].author}`);
+                bookPlotElem.innerHTML = (`${booksData[1].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[1].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[1].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[1].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[1].publisher}`);
             }
             else if (book.id === "book03") {
-                booksInfo.innerHTML = (`${booksData[2].title} <br> By ${booksData[2].author} <br> <br> ${booksData[2].plot} <br> Audience: ${booksData[2].audience}    First published: ${booksData[2].year} <br>  Pages: ${booksData[2].pages}  publisher: ${booksData[2].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[2].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[2].author}`);
+                bookPlotElem.innerHTML = (`${booksData[2].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[2].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[2].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[2].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[2].publisher}`);
             }
             else if (book.id === "book04") {
-                booksInfo.innerHTML = (`${booksData[3].title} <br> By ${booksData[3].author} <br> <br> ${booksData[3].plot} <br> Audience: ${booksData[3].audience}    First published: ${booksData[3].year} <br>  Pages: ${booksData[3].pages}  publisher: ${booksData[3].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[3].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[3].author}`);
+                bookPlotElem.innerHTML = (`${booksData[3].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[3].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[3].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[3].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[3].publisher}`);
             }
             else if (book.id === "book05") {
-                booksInfo.innerHTML = (`${booksData[4].title} <br> By ${booksData[4].author} <br> <br> ${booksData[4].plot} <br> Audience: ${booksData[4].audience}    First published: ${booksData[4].year} <br>  Pages: ${booksData[4].pages}  publisher: ${booksData[4].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[4].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[4].author}`);
+                bookPlotElem.innerHTML = (`${booksData[4].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[4].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[4].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[4].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[4].publisher}`);
             }
             else if (book.id === "book06") {
-                booksInfo.innerHTML = (`${booksData[5].title} <br> By ${booksData[5].author} <br> <br> ${booksData[5].plot} <br> Audience: ${booksData[5].audience}    First published: ${booksData[5].year} <br>  Pages: ${booksData[5].pages}  publisher: ${booksData[5].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[5].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[5].author}`);
+                bookPlotElem.innerHTML = (`${booksData[5].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[5].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[5].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[5].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[5].publisher}`);
             }
             else if (book.id === "book07") {
-                booksInfo.innerHTML = (`${booksData[6].title} <br> By ${booksData[6].author} <br> <br> ${booksData[6].plot} <br> Audience: ${booksData[6].audience}    First published: ${booksData[6].year} <br>  Pages: ${booksData[6].pages}  publisher: ${booksData[6].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[6].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[6].author}`);
+                bookPlotElem.innerHTML = (`${booksData[6].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[6].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[6].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[6].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[6].publisher}`);
             }
             else if (book.id === "book08") {
-                booksInfo.innerHTML = (`${booksData[7].title} <br> By ${booksData[7].author} <br> <br> ${booksData[7].plot} <br> Audience: ${booksData[7].audience}    First published: ${booksData[7].year} <br>  Pages: ${booksData[7].pages} <span>          publisher: ${booksData[7].publisher}`);
+                bookHeaderElem.innerHTML = (`${booksData[7].title}`);
+                bookAuthorElem.innerHTML = (`By ${booksData[7].author}`);
+                bookPlotElem.innerHTML = (`${booksData[7].plot}`);
+                bookAudienceElem.innerHTML = (`Audience: ${booksData[7].audience}`);
+                bookPublishedElem.innerHTML = (`First published: ${booksData[7].year}`);
+                bookPagesElem.innerHTML = (`Pages: ${booksData[7].pages} `);
+                bookPublisherElem.innerHTML = (`Publisher: ${booksData[7].publisher}`);
             }
             pageTwo.classList.toggle('hide');
             pageOne.style.display = 'none';
             container__h1.style.display = 'none';
-            //booksInfo.innerHTML = (`booksData: ${booksData[4].year}}`)
         });
     });
     minimizeInfoElem.addEventListener('click', () => {
@@ -72,4 +111,3 @@ function showBooks(booksData) {
     });
 }
 getBooks();
-export {};

@@ -14,7 +14,7 @@
         <section id="pageOne" id="books">
             <article id="book01" class="book book1"> <h3>Goodnight Moon</h3> </article>
             <article id="book02" class="book book2"> <h3>The Very Hungry Caterpillar</h3> </article>
-            <article id="book03" class="book book3"> <h3>Madeleine L’Engle</h3></article>
+            <article id="book03" class="book book3"> <h3>A Wrinkle in Time</h3></article>
             <article id="book04" class="book book4"> <h3>Harold and the Purple Crayon</h3></article>
             <article id="book05" class="book book5"> <h3>Where the Wild Things Are</h3></article>
             <article id="book06" class="book book6"> <h3>Madeline</h3></article>
@@ -22,9 +22,28 @@
             <article id="book08" class="book book8"><h3>Charlotte’s Web</h3></article>
         </section>
         <section id="pageTwo" class="hide">
-            <button id="minimize">Tillbaka</button>
-            <p id="books_info">Här kommer massa info om böckerna</p>
+            <article id="pageTwo_klicked">
+            <button id="minimize">Back to library</button>
+            <h2 id="book_header_title" class="books_info" ></h2>
+            <p id="book_author" class="books_info" ></p>
+            <p id="book_plot" class="books_info" ></p>
+            <article id="more_about_this_book">
+                <p id="audience" class="books_info" ></p>
+                <p id="published" class="books_info" ></p>
+                <p id="pages" class="books_info" ></p>
+                <p id="Publisher" class="books_info" > </p>
+
+            </article>
+
+            <button id="lend_book_button"> Oh, I Want to read it!</button>                            
+            </article>
         </section>
+            <form id="search_book" action="seachBooks">
+                <label for="Search Book">Search Book </label>
+            <input id="searh_book_input" type="text">                
+            </form>
+
+
     </section>
 
 
