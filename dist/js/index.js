@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { booksElem, pageOne, pageTwo, bookHeaderElem, bookAuthorElem, bookPlotElem, bookAudienceElem, bookPublishedElem, bookPagesElem, bookPublisherElem, minimizeInfoElem, container__h1, API_URL } from './modules/vairables.js';
+import { booksElem, pageOne, pageTwo, bookHeaderElem, bookAuthorElem, bookPlotElem, bookAudienceElem, bookPublishedElem, bookPagesElem, bookPublisherElem, minimizeInfoElem, container__h1, API_URL, searchButtonElem, searchBooksInputElem } from './modules/vairables.js';
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -111,3 +111,34 @@ function showBooks(booksData) {
     });
 }
 getBooks();
+searchButtonElem.addEventListener('click', function () {
+    const search = searchBooksInputElem.value;
+    console.log(search);
+    if (search === "Goodnight Moon" || search === "goodnight moon" || search === "Goodnight moon" || search === "good night moon") {
+        document.getElementById('book01').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "The Very Hungry Caterpillar") {
+        document.getElementById('book02').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "A Wrinkle in Time") {
+        document.getElementById('book03').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "Harold and the Purple Crayon") {
+        document.getElementById('book04').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "Where the Wild Things Are") {
+        document.getElementById('book05').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "Madeline") {
+        document.getElementById('book06').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "The Tale of Peter Rabbit") {
+        document.getElementById('book07').style.animation = "blinkingBackground 2s infinite";
+    }
+    else if (search === "Charlotte’s Web") {
+        document.getElementById('book08').style.animation = "blinkingBackground 2s infinite";
+    }
+    else {
+        console.log('boken finns inte');
+    }
+});

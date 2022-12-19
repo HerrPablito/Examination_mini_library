@@ -157,3 +157,11 @@ form{
     border-radius: 10px;
     font-size: 1.3rem;
 }
+
+@keyframes blinkingBackground{
+    0%		{ background-color: #10c018;}
+    25%		{ background-color: #1056c0;}
+    50%		{ background-color: #ef0a1a;}
+    75%		{ background-color: #254878;}
+    100%	        { background-color: #04a1d5;}
+}
