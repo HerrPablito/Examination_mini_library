@@ -23,9 +23,7 @@ function getBooks() {
                     //console.log(booksData[i].year);      
                     const bookYear = booksData[i].year;
                     console.log(bookYear);
-                    return bookYear;
                 }
-                //return booksData
             }
         }
         catch (error) {
@@ -34,16 +32,15 @@ function getBooks() {
     });
 }
 ;
-getBooks();
-function showBooks(bookYear) {
-    const year = bookYear;
+function showBooks() {
     booksElem.forEach(book => {
         book.addEventListener('click', () => {
             console.log('du klickade på en bok');
             pageTwo.classList.toggle('hide');
-            booksInfo.innerHTML = ('test' + year);
+            booksInfo.innerHTML = ('test');
         });
     });
 }
-showBooks(getBooks);
+getBooks();
+showBooks();
 export {};
