@@ -18,6 +18,7 @@ body{
     grid-template-areas: 
     "container__h1 container__h1 container__h1 container__h1"
     "pageOne pageOne pageOne pageOne"
+    "pagetwo pagetwo pagetwo pagetwo"
     ;
 }
 
@@ -32,6 +33,8 @@ body{
 .hide{
     display: none;
 }
+
+
 
 #pageOne{
     grid-area: pageOne;
@@ -84,4 +87,15 @@ body{
 #book08{
     grid-area: book08;
     background-color: #EB5757;
+}
+
+#pageTwo{
+    grid-area: pageTwo;
+    width: 100%;
+}
+#books_info{
+    margin: 1rem;
+}
+#minimize{
+    margin: 1rem;
 }

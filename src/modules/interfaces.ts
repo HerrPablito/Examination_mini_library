@@ -1,10 +1,11 @@
 export interface Books{
     title: string,
-    authon: string,
+    author: string,
     color: string,
     id: number,
-    numPages: number,
+    pages: number,
     plot: string,
     publisher: string,
     year: number
+    audience: string
 }
