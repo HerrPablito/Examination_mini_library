@@ -18,7 +18,7 @@ body{
     grid-template-areas: 
     "container__h1 container__h1 container__h1 container__h1"
     "pageOne pageOne pageOne pageOne"
-    "pagetwo pagetwo pagetwo pagetwo"
+
     ;
 }
 
@@ -44,6 +44,10 @@ form{
     grid-template-areas: 
     "book01 book02 book03 book04"
     "book05 book06 book07 book08"
+    "label label label label"
+    ". input button ."
+    "error error error error"
+    "pagetwo pagetwo pagetwo pagetwo"
     ;
 }
 
@@ -163,5 +167,37 @@ form{
     25%		{ background-color: #1056c0;}
     50%		{ background-color: #ef0a1a;}
     75%		{ background-color: #254878;}
-    100%	        { background-color: #04a1d5;}
+    100%	{ background-color: #04a1d5;}
+}
+
+#search_label{
+    grid-area: label;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+#error{
+    grid-area: error;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 1rem;  
+}
+#search_book_input{
+    grid-area: input;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border: 2px solid black; 
+
+}
+#search_Btn{
+    width: 7rem;
+    height: 2rem;
+    border: 2px solid black;
+    font-size: 15px;
+    border-radius: 10px;
+    grid-area: button;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 1rem;
 }

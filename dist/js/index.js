@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { booksElem, pageOne, pageTwo, bookHeaderElem, bookAuthorElem, bookPlotElem, bookAudienceElem, bookPublishedElem, bookPagesElem, bookPublisherElem, minimizeInfoElem, container__h1, API_URL, searchButtonElem, searchBooksInputElem } from './modules/vairables.js';
+import { booksElem, pageOne, pageTwo, bookHeaderElem, bookAuthorElem, bookPlotElem, bookAudienceElem, bookPublishedElem, bookPagesElem, bookPublisherElem, minimizeInfoElem, container__h1, API_URL, searchButtonElem, searchBooksInputElem, errorElem } from './modules/vairables.js';
 function getBooks() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -113,32 +113,42 @@ function showBooks(booksData) {
 getBooks();
 searchButtonElem.addEventListener('click', function () {
     const search = searchBooksInputElem.value;
+    errorElem.innerHTML = ('');
+    document.getElementById('book01').style.animation = 'none';
+    document.getElementById('book02').style.animation = 'none';
+    document.getElementById('book03').style.animation = 'none';
+    document.getElementById('book04').style.animation = 'none';
+    document.getElementById('book05').style.animation = 'none';
+    document.getElementById('book06').style.animation = 'none';
+    document.getElementById('book07').style.animation = 'none';
+    document.getElementById('book08').style.animation = 'none';
     console.log(search);
     if (search === "Goodnight Moon" || search === "goodnight moon" || search === "Goodnight moon" || search === "good night moon") {
         document.getElementById('book01').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "The Very Hungry Caterpillar") {
+    else if (search === "The Very Hungry Caterpillar" || search === "the very hungry caterpillar" || search === "The very hungry caterpillar") {
         document.getElementById('book02').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "A Wrinkle in Time") {
+    else if (search === "A Wrinkle in Time" || search === "a wrinkle in time" || search === "A wrinkle in time") {
         document.getElementById('book03').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "Harold and the Purple Crayon") {
+    else if (search === "Harold and the Purple Crayon" || search === "harold and the purple crayon" || search === "Harold and the purple crayon") {
         document.getElementById('book04').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "Where the Wild Things Are") {
+    else if (search === "Where the Wild Things Are" || search === "where the wild things are" || search === "Where the wild things are") {
         document.getElementById('book05').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "Madeline") {
+    else if (search === "Madeline" || search === "madeline") {
         document.getElementById('book06').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "The Tale of Peter Rabbit") {
+    else if (search === "The Tale of Peter Rabbit" || search === "the tale of peter rabbit" || search === "The tale of peter rabbit" || search === "The tale of Peter rabbit") {
         document.getElementById('book07').style.animation = "blinkingBackground 2s infinite";
     }
-    else if (search === "Charlotte’s Web") {
+    else if (search === "Charlotte’s Web" || search === "Charlottes Web" || search === "charlotte’s web" || search === "charlottes web") {
         document.getElementById('book08').style.animation = "blinkingBackground 2s infinite";
     }
     else {
+        errorElem.innerHTML = ('Sorry buddy. We dont have that book here. Try another');
         console.log('boken finns inte');
     }
 });
