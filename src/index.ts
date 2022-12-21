@@ -105,10 +105,6 @@ function showBooks(booksData: Books[]) {
 }
 
 
-
-
-
-
 getBooks()
 
 searchButtonElem.addEventListener('click', function () {
