@@ -92,7 +92,7 @@ function showBooks(booksData: Books[]) {
             pageTwo.classList.toggle('hide')
             pageOne.style.display = 'none';
             container__h1.style.display = 'none';
-            
+
         });
 
     })
@@ -109,7 +109,9 @@ getBooks()
 
 searchButtonElem.addEventListener('click', function () {
     const search = searchBooksInputElem.value;
-    errorElem.innerHTML=('')
+    let libraryLink = `https://encore.gotlib.goteborg.se/iii/encore/search?lang=swe&target=${search}&ivts=UnZfg8dMk8r4eG8ua7v8TA%3D%3D&casts=Wtgg2hnONeXddcaCO7CLUQ%3D%3D`;
+    errorElem.innerHTML = ('')
+
     document.getElementById('book01').style.animation = 'none'
     document.getElementById('book02').style.animation = 'none'
     document.getElementById('book03').style.animation = 'none'
@@ -144,9 +146,13 @@ searchButtonElem.addEventListener('click', function () {
         document.getElementById('book08').style.animation = "blinkingBackground 2s infinite";
 
     } else {
-        errorElem.innerHTML=('Sorry buddy. We dont have that book here. Try another')
-        console.log('boken finns inte');
-
-    }
+        if (search != '') {
+        errorElem.innerHTML = ('Sorry buddy, We dont have that wierd book here. Try the other library: ')
+        errorElem.innerHTML += '<a href="' + libraryLink + '">' + 'Here' + '</a>';
+             
+        }
+   }
 }
 )
+
+

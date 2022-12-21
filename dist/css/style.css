@@ -3,13 +3,16 @@
 }
 
 body{
-    height: 100hv;
-    width: 100 Wv;
-    background-color: rgb(173, 173, 173);
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(255, 87, 58), yellow);
+    background-repeat: no-repeat;
+
 }
 .container{
     max-width: 600px;
-    background-color: white;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,255,255,0.02192752100840334) 53%);
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -102,20 +105,17 @@ form{
 #pageTwo_klicked{
     grid-area: pageTwo;
     width: 600px;
-    background-color: #464544;
+    
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,255,255,0.02192752100840334) 53%);
+
     color: white;
     display: flex;
     flex-direction: column;
 
 }
-.books_info{
-    margin: 1rem;
-}
-#minimize{
-    margin: 1rem;
-}
 
-#lend_book_button{
+#minimize{
     margin: 1rem;
 }
 
@@ -124,7 +124,7 @@ form{
 }
 
 #more_about_this_book{
-    background-color: #5e5e5e;
+    background-color: #b6abab4b;
     margin-left: 1rem;
     margin-right: 1rem;
     display: grid;
@@ -156,6 +156,7 @@ form{
 }
 
 #lend_book_button{
+    margin: 1rem;
     height: 4rem;
     width: 17rem;
     border-radius: 10px;
